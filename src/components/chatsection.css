@@ -1,0 +1,243 @@
+/* General Layout */
+.chat-interface {
+    display: flex;
+    flex-direction: column;
+    height: 88vh;
+    overflow: hidden;
+    background:linear-gradient(135deg, #2c2c2c, #3a3a3a);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    color: #fff;
+    padding: 20px ;
+    margin-bottom: 5%;
+    border-radius: 8px;
+   
+    
+}
+
+.fileNamecenter{
+    padding: 0;
+    padding-bottom: 5px;
+    margin: 0;
+}
+.chat-history {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #252525;
+    max-height: 75vh;
+    margin-bottom: 20px;
+}
+
+/* Chat Message */
+.chat-message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+
+}
+
+.chat-message.user {
+    justify-content: flex-end;
+    background-color: #3b3b3b;
+    color: #e0e0e0;
+    font-weight: 600;
+}
+
+.chat-message.assistant {
+    justify-content: flex-start;
+    background-color: #333333;
+    color: #e0e0e0;
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* Avatars */
+.message-avatar {
+    font-size: 2rem;
+    margin-right: 10px;
+    padding: 0 1rem;
+    color: #aaa;
+    
+}
+
+
+
+.chat-message.user .message-avatar {
+    order: 2; /* Move avatar to the left for the user */
+}
+
+.chat-message.assistant .message-avatar {
+    order: 0; /* Move avatar to the right for the assistant */
+}
+
+/* Chat Message Content */
+.message-content {
+    max-width: 100%;
+    word-wrap: break-word;
+    color: #fff;
+}
+
+/* Input Field */
+.chat-input {
+    display: flex;
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    border: 1px solid #555;
+}
+
+.chat-input input::placeholder {
+    color: #888;
+}
+
+.chat-input button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-input button:hover {
+    background-color: #005fa3;
+}
+
+.chat-input button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+/* Header */
+h1 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.markdown-content {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: white;
+}
+
+.markdown-content p {
+    margin: 0 0 12px;
+    color: white;
+}
+
+.markdown-content strong {
+    font-weight: bold;
+    color: white;
+}
+
+.markdown-content em {
+    font-style: italic;
+    color: #bbb;
+}
+
+.markdown-content h1, .markdown-content h2, .markdown-content h3 {
+    margin: 16px 0 8px;
+    color: #fff;
+    border-bottom: 1px solid #444;
+    padding-bottom: 4px;
+}
+
+.markdown-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    color: #ddd;
+}
+
+.markdown-content ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    color: #ddd;
+}
+
+.markdown-content a {
+    color: #00aaff;
+    text-decoration: underline;
+}
+
+.markdown-content code {
+    background-color: #333;
+    color: #c5c5c5;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+
+.markdown-content pre {
+    background-color: #2d2d2d;
+    color: #c5c5c5;
+    padding: 10px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.markdown-content blockquote {
+    margin: 12px 0;
+    padding: 10px;
+    border-left: 4px solid #444;
+    background-color: #222;
+    color: #ccc;
+    font-style: italic;
+}
+
+.markdown-content hr {
+    border: none;
+    border-top: 1px solid #444;
+    margin: 20px 0;
+}
+
+.loading {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    color: #aaa;
+}
+
+.loading-dots::after {
+    content: '...';
+    display: inline-block;
+    animation: loading-dots 1.5s infinite;
+}
+
+@keyframes loading-dots {
+    0% {
+        content: '';
+    }
+    33% {
+        content: '.';
+    }
+    66% {
+        content: '..';
+    }
+    100% {
+        content: '...';
+    }
+}

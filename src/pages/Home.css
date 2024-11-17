@@ -1,0 +1,7 @@
+.main_container{
+    display: grid;
+    grid-template-columns: 18% 82%;
+    max-height: 90vh;
+    
+
+}

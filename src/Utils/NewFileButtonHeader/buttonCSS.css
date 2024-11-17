@@ -1,0 +1,31 @@
+.header-new-file-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #f0f0f0;
+    background: linear-gradient(135deg, #2c2c2c, #3a3a3a);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.header-new-file-button .icon {
+    font-size: 18px;
+}
+
+.header-new-file-button:hover {
+    background: linear-gradient(135deg, #3a3a3a, #4a4a4a);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+    transform: translateY(-1px);
+}
+
+.header-new-file-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}

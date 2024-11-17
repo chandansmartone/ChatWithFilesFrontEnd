@@ -1,0 +1,49 @@
+.sidebar {
+    width: inherit;
+    background-color: #f4f4f4;
+    padding: 10px;
+    height: 88vh;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+    overflow-x: auto; /* Scroll if content is too long */
+}
+
+
+.sidebar-header {
+    margin-bottom: 20px;
+}
+
+.sidebar-menu {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    color: #333;
+
+}
+
+
+hr{
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-menu li a {
+    display: flex;
+    color: #333;
+    align-items: center;
+    padding: 10px;
+}
+.selectedFileClass a{
+    background-color: antiquewhite;
+    padding: 10px;
+}
+
+.sidebar-menu li a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+.sidebar-menu li a svg {
+    margin-right: 8px; /* Space between icon and text */
+}
+span{
+    align-self: center;
+}

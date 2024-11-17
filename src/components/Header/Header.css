@@ -1,0 +1,113 @@
+.header {
+    background-color: #171b1f; /* Header background color */
+   /* Header background color */
+        color: white; /* Text color */
+        display: flex; /* Flexbox layout */
+        justify-content: space-between; /* Space between elements */
+        align-items: center; /* Center align items vertically */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+    
+    .header-container {
+        display: flex; /* Flexbox for header contents */
+        align-items: center; /* Align items center */
+        width: 100%; /* Full width */
+         /* Space out items */
+         
+    }
+    
+    .logo {
+        font-weight: bold;
+        margin-left: 2%;
+        justify-content: center;
+        justify-self: center;
+    }
+    
+    .nav-links {
+        display: flex; /* Flexbox for nav links */
+        gap: 20px; /* Space between links */
+        margin-left: auto; 
+        margin-right: 2rem;/* Pushes the nav links to the left */
+        
+    }
+    
+    .nav-links a {
+        color: white; /* Link color */
+        text-decoration: none; /* Remove underline */
+        transition: color 0.3s; /* Smooth transition for hover */
+    }
+    
+    .nav-links a:hover {
+        color: #ffd700; /* Change color on hover */
+    }
+    
+    .user-profile {
+        display: flex; /* Flexbox for user profile */
+        align-items: center; /* Center align */
+        color: white; 
+        gap: 1rem;/* Text color */
+        margin-right: 2%;
+    }
+    .user{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .user-icon {
+        font-size: 1.5rem; /* Icon size */
+        margin-right: 8px; /* Space between icon and text */
+    }
+    .nav-close {
+        display: none; /* Initially hidden */
+    }
+    .menu-icon{
+        display: none;
+    }
+    @media screen and (max-width: 768px) {
+        
+    
+        .nav-links {
+            flex-direction: column;
+            align-items: flex-start;
+            display: none; /* Initially hide the menu */
+            width: 30%; /* Full width */
+            background-color:  #171b1f; /* Background for the dropdown */
+            position: absolute; /* Positioning */
+            top: 30px; /* Adjust based on header height */
+            right: 0; /* Align to the left */
+            z-index: 10; 
+            justify-content: center;
+            align-items: center;/* Ensure it is above other elements */
+            padding: 1rem 0; /* Add some padding */
+        }
+    
+        .nav-links.open {
+            display: flex; /* Show when open */
+        }
+    
+        .menu-icon {
+            display: flex;
+            align-items: end;
+            justify-content: end;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem; /* Adjust icon size */
+        }
+    
+        .nav-close {
+            background: none;
+            display: block;
+            border: none;
+            color: white;
+            font-size: 1.5rem; /* Close icon size */
+            align-self: flex-end; /* Align to the end of the nav links */
+            margin-right: 1rem; /* Margin to the right */
+            cursor: pointer;
+        }
+    
+        .user-profile {
+            margin: 1rem 0;
+        }
+    }

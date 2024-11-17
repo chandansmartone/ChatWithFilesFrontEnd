@@ -1,0 +1,38 @@
+.spinner {
+    display: inline-block;
+    width: 2rem; /* Matches 'w-8' */
+    height: 2rem; /* Matches 'h-8' */
+    color: #e5e7eb; /* Matches 'text-gray-200' */
+    animation: spin 1s linear infinite;
+}
+
+.spinner svg {
+    width: 100%;
+    height: 100%;
+    fill: #2563eb; /* Matches 'fill-blue-600' */
+}
+
+.spinner.dark {
+    color: #4b5563; /* Matches 'dark:text-gray-600' */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
